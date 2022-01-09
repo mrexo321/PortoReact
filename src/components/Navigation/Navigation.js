@@ -28,7 +28,7 @@ const Nav = () => {
   return (
     <div className="">
       <div className="navigation py-5 transition duration-500 ease-in-out w-full bg-gradient-to-r from-black to-gray-900  fixed flex justify-center items-center">
-        <div className="navigation-menu open-sans container mx-auto flex justify-between items-center">
+        <div className="navigation-menu open-sans container p-0 mx-auto flex justify-between items-center">
           <a className="text-xl  text-white font-semibold" href="#">
             Ini Logo
           </a>
