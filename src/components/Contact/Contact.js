@@ -28,7 +28,7 @@ const Contact = () => {
                     </div>
 
                     <div className="social-media mt-10">
-                        <h4 className="text-xl font-semibold">Stay connect with me :)</h4>
+                        <h4 className="text-xl font-semibold">Stay connect with me</h4>
                         <div className="flex mt-3">
                             <a href="https://github.com/mrexo321" className='mr-5 transition duration-300 hover:scale-150'>
                             <svg className="" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
