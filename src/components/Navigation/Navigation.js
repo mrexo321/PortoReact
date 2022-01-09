@@ -33,8 +33,8 @@ const Nav = () => {
             Ini Logo
           </a>
           <div className="right-menu text-white flex items-center">
-            <a className="text-xl font-semibold  hover: ease-in-out duration-300" href="">
-              Project
+            <a className="text-xl font-semibold" href="">
+              <span className="hover:border-b-2 ">Project</span>
             </a>
             <a className="ml-4 text-xl font-semibold  hover: transition duration-300 ease-in-out" href="">
               Contact
