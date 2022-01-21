@@ -1,11 +1,4 @@
-import html from "../../assets/html.svg";
-import css from "../../assets/css.svg";
-import bootstrap from "../../assets/bootstrap.svg";
-import tailwindcss from "../../assets/tailwindcss.svg";
-import javascript from "../../assets/javascript.svg";
-import php from "../../assets/php.svg";
-import laravel from "../../assets/laravel.svg";
-import nodejs from "../../assets/nodejs.svg";
+// 89i  w
 // 
 const Skills = () => {
   return (

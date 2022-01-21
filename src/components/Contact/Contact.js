@@ -3,7 +3,7 @@ import logoReact from '../../assets/logo512.png';
 const Contact = () => {
 
     return (
-        <section className="text-white pt-16 container mx-auto w-full capitalize"> 
+        <section id='contact' className="text-white pt-16 container mx-auto w-full capitalize open-sans"> 
             <div className="flex flex-col  md:flex-row md:justify-between items-start  md:items-center">
                 <div className="contact-text">
                     <div className="contact-description">

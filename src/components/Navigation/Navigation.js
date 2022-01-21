@@ -1,4 +1,8 @@
 import { useState } from "react";
+import { useEffect } from "react";
+import '../../Darkmode';
+
+
 
 const Nav = () => {
   const [navbar, setNavbar] = useState(false);
@@ -10,6 +14,39 @@ const Nav = () => {
   //     setNavbar(false);
   //   }
   // };
+
+  const [theme,setTheme] = useState('light');
+
+  useEffect(() =>{
+    const localTheme = localStorage.getItem('theme')
+    if(localTheme){
+      setTheme(localTheme)
+    }
+  } , [])
+
+  const toggleTheme = () =>{
+    if(theme === 'dark'){
+      // setTheme('light')
+      console.log('light')
+    }else{
+      // setTheme('dark')
+      console.log('dark')
+    }
+  }
+
+  
+
+  // const [dark,setDark] = useState(false);
+
+  //   function toggling(){
+  //       setDark(!dark);
+
+  //       if(dark === false){
+  //       console.log('false')
+  //       }else{
+  //       console.log('true')
+  //       }
+  //   }
 
   const changeNavBackground = () => {
     if (window.scrollY >= 2) {
@@ -27,16 +64,16 @@ const Nav = () => {
 
   return (
     <div className="">
-      <div className="navigation py-5 transition duration-500 ease-in-out w-full bg-gradient-to-r from-black to-gray-900  fixed flex justify-center items-center">
+      <div className="navigation py-5 transition duration-500 ease-in-out w-full bg-gradient-to-r from-black to-gray-900  fixed flex justify-center items-center open-sans  ">
         <div className="navigation-menu open-sans container p-0 mx-auto flex justify-between items-center">
           <a className="text-xl  text-white font-semibold" href="#">
             Ini Logo
           </a>
           <div className="right-menu text-white flex items-center">
-            <a className="text-xl font-semibold" href="">
-              <span className="hover:border-b-2 ">Project</span>
+            <a className="text-xl font-semibold" href="#project">
+              Project
             </a>
-            <a className="ml-4 text-xl font-semibold  hover: transition duration-300 ease-in-out" href="">
+            <a className="ml-4 text-xl font-semibold  hover: transition duration-300 ease-in-out" href="#contact">
               Contact
             </a>
             <a className=" text-xl font-semibold border border-black rounded-md p-2 bg-transparent border-none text-white  " href="">
@@ -47,11 +84,13 @@ const Nav = () => {
                 <h4 className="ml-2">GitHub</h4>
               </div>
             </a>
-            <a className=" text-xl font-semibold border rounded-full bg-transparent border-none text-white p-2 hover:bg-white hover:text-black hover:transition duration-500" href="">
-              <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <span className=" text-xl font-semibold border rounded-full bg-transparent border-none text-white p-2 hover:bg-white hover:text-black hover:transition duration-500 cursor-pointer">
+              
+              <svg onClick={toggleTheme}  class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
               </svg>
-            </a>
+              
+            </span>
           </div>
         </div>
       </div>
